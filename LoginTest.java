@@ -22,13 +22,6 @@ public class LoginTest {
 
     @Parameters({"browser"})
 
-//    @BeforeSuite(alwaysRun = true)
-//    public void initDriver (String browser) {
-//
-//        driver = WebDriverSetup.getWebDriver(browser);
-//        driver.navigate().to(host);
-//    }
-
     @BeforeTest (alwaysRun = true, groups = {"Positive,Negative"},description = "Verify that user is able to open" + "PlaceLab App.")
     public void openApp(String browser) {
 
