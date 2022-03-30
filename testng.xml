@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login Test" parallel="tests" thread-count="2">
+    <test name="Login Edge">
+        <parameter name="browser" value="edge" />
+        <groups>
+            <run>
+                <include name="Positive"/>
+                <include name="Negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="placelab.tests.LoginTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Login Chrome">
+        <parameter name="browser" value="chrome" />
+        <groups>
+            <run>
+                <include name="Positive"/>
+                <include name="Negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="placelab.tests.LoginTest">
+            </class>
+        </classes>
+    </test>
+</suite>
